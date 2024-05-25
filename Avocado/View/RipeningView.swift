@@ -53,9 +53,7 @@ struct RipeningView: View {
                 .foregroundColor(Color("ColorGreenMedium"))
                 .padding(.top, 65)
                 .frame(width: 180)
-                
-                //                Title
-                
+
                 Text(ripening.title)
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
@@ -79,13 +77,13 @@ struct RipeningView: View {
                             y: 6)
                 
                 Spacer()
-                //                Description
+                
                 Text(ripening.description)
                     .foregroundColor(Color("ColorGreenDark"))
                     .fontWeight(.bold)
                     .lineLimit(nil)
                 Spacer()
-                //                Ripening
+                
                 Text(ripening.ripeness.uppercased())
                     .foregroundColor(.white)
                     .font(.system(.callout, design: .serif))
@@ -108,8 +106,6 @@ struct RipeningView: View {
                                 x: 0,
                                 y: 6 )
                     )
-                    
-                //                Instruction
                 
                 Text(ripening.instruction)
                     .font(.footnote)

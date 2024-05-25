@@ -31,6 +31,9 @@
 		09FE87152AC60B9D00924057 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE87142AC60B9D00924057 /* ContentView.swift */; };
 		09FE87172AC60BA500924057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FE87162AC60BA500924057 /* Assets.xcassets */; };
 		09FE871A2AC60BA500924057 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FE87192AC60BA500924057 /* Preview Assets.xcassets */; };
+		4890C54E2BF9339500B0EE85 /* DishData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C54D2BF9339500B0EE85 /* DishData.swift */; };
+		4890C5502BF933B800B0EE85 /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C54F2BF933B800B0EE85 /* DishModel.swift */; };
+		4890C5522BF9A36300B0EE85 /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C5512BF9A36300B0EE85 /* DishView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		09FE87142AC60B9D00924057 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		09FE87162AC60BA500924057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09FE87192AC60BA500924057 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4890C54D2BF9339500B0EE85 /* DishData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishData.swift; sourceTree = "<group>"; };
+		4890C54F2BF933B800B0EE85 /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
+		4890C5512BF9A36300B0EE85 /* DishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 				0948191F2ACF7DA8005DA2B2 /* FactData.swift */,
 				094819232AD065D6005DA2B2 /* RecipeData.swift */,
 				094819312AD23B10005DA2B2 /* RipeningData.swift */,
+				4890C54D2BF9339500B0EE85 /* DishData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -91,6 +98,7 @@
 				0948191D2ACF7D65005DA2B2 /* FactModel.swift */,
 				094819212AD0651B005DA2B2 /* RecipeModel.swift */,
 				0948192F2AD23AAC005DA2B2 /* RipeningModel.swift */,
+				4890C54F2BF933B800B0EE85 /* DishModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +113,7 @@
 				098FFF082ACB409700F7E266 /* AppView.swift */,
 				098FFF0A2ACB565B00F7E266 /* HeaderView.swift */,
 				094819172ACE26EA005DA2B2 /* DishesView.swift */,
+				4890C5512BF9A36300B0EE85 /* DishView.swift */,
 				094819192ACF78D4005DA2B2 /* FactsView.swift */,
 				094819252AD0670A005DA2B2 /* RecipeCardView.swift */,
 				094819272AD07113005DA2B2 /* RecipeRatingView.swift */,
@@ -181,7 +190,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					09FE870E2AC60B9D00924057 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -197,6 +206,9 @@
 				Base,
 			);
 			mainGroup = 09FE87062AC60B9D00924057;
+			packageReferences = (
+				4874C30D2BF04B01003F0312 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = 09FE87102AC60B9D00924057 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +246,7 @@
 				094819142ACE238A005DA2B2 /* HeaderModel.swift in Sources */,
 				094819222AD0651B005DA2B2 /* RecipeModel.swift in Sources */,
 				094819162ACE23F3005DA2B2 /* HeaderData.swift in Sources */,
+				4890C5522BF9A36300B0EE85 /* DishView.swift in Sources */,
 				094819182ACE26EA005DA2B2 /* DishesView.swift in Sources */,
 				0948192A2AD071B4005DA2B2 /* RecipeCookingView.swift in Sources */,
 				0948192E2AD22CE9005DA2B2 /* RipeningView.swift in Sources */,
@@ -242,8 +255,10 @@
 				094819262AD0670A005DA2B2 /* RecipeCardView.swift in Sources */,
 				094819242AD065D6005DA2B2 /* RecipeData.swift in Sources */,
 				098FFF0B2ACB565B00F7E266 /* HeaderView.swift in Sources */,
+				4890C5502BF933B800B0EE85 /* DishModel.swift in Sources */,
 				094819322AD23B10005DA2B2 /* RipeningData.swift in Sources */,
 				0948192C2AD07284005DA2B2 /* RecipeDetailView.swift in Sources */,
+				4890C54E2BF9339500B0EE85 /* DishData.swift in Sources */,
 				094819202ACF7DA8005DA2B2 /* FactData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -287,6 +303,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -301,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -315,6 +332,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -347,6 +365,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -355,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -373,13 +392,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Avocado/Preview Content\"";
-				DEVELOPMENT_TEAM = 5WR73Q6863;
+				DEVELOPMENT_TEAM = 4EE6D69E6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Avocado/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -387,7 +406,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adriancysvillegas.Avocado;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apis3445.Avocado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -403,13 +422,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Avocado/Preview Content\"";
-				DEVELOPMENT_TEAM = 5WR73Q6863;
+				DEVELOPMENT_TEAM = 4EE6D69E6C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Avocado/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -417,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.adriancysvillegas.Avocado;
+				PRODUCT_BUNDLE_IDENTIFIER = com.apis3445.Avocado;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -447,6 +466,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4874C30D2BF04B01003F0312 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 09FE87072AC60B9D00924057 /* Project object */;
 }

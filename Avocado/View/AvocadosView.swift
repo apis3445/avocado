@@ -47,7 +47,7 @@ struct AvocadosView: View {
                 
                 Text("""
                      Creamy, green, and full of nutrients!
-                    Avocado is a powerhouse ingredient at any meal.
+                    Avocado is a powerhouse ingredient in any meal.
                     Enjoy these handpicked avocado recipes for breakfast, lunch, dinner & more!
                     """)
                 .lineLimit(nil)

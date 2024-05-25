@@ -14,7 +14,7 @@ let headerData: [Header] = [
     Header(
         image: "avocado-slice-1",
         headline: "Avocado",
-        subHeadline: "Avocados are a powerhouse ingredient at any meal for anyone"
+        subHeadline: "Avocados are a powerhouse ingredient at any meal for anyone."
     ),
     Header(
       image: "avocado-slice-2",
@@ -29,12 +29,12 @@ let headerData: [Header] = [
     Header(
       image: "avocado-slice-4",
       headline: "Delicious",
-      subHeadline: "Craving more guacamole? Find the best guacamole recipes in the app."
+      subHeadline: "Are you craving more guacamole? Find the best guacamole recipes in the app."
     ),
     Header(
       image: "avocado-slice-5",
       headline: "Tasty",
-      subHeadline: "Avocados are a good source of natural fiber, which making you feel full."
+      subHeadline: "Avocados are an excellent natural fiber source, making you feel full."
     ),
     Header(
       image: "avocado-slice-6",

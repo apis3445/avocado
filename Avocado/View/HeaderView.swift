@@ -54,7 +54,7 @@ struct HeaderView: View {
             }
             .frame(width: 285, height: 105, alignment: .center)
             .offset(x: -66, y: showHeadline ? 75 : 220)
-            .animation(slideInAnimation)
+            .transition(.slide)
             .onAppear {
                 self.showHeadline.toggle()
             }

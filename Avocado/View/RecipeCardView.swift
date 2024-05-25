@@ -46,23 +46,19 @@ struct RecipeCardView: View {
                     }
                 )
             VStack(alignment: .leading, spacing: 12) {
-//                title
                 Text(recipe.title)
                     .font(.system(.title, design: .serif))
                     .fontWeight(.bold)
                     .foregroundColor(Color("ColorGreenMedium"))
                     .lineLimit(1)
-//                headline
                 
                 Text(recipe.headline)
                     .font(.system(.body, design: .serif))
                     .foregroundColor(.gray)
                     .italic()
                 
-//                rates
                 RecipeRatingView(recipe: recipe)
                 
-//                cooking
                RecipeCookingView(recipe: recipe)
             }
             .padding()

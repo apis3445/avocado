@@ -8,48 +8,16 @@
 import SwiftUI
 
 struct DishesView: View {
+    var dishes: [Dish] = dishData
+    var halfCount = 4
     var body: some View {
         HStack(alignment: .center, spacing: 4) {
             VStack(alignment: .leading, spacing: 4) {
                 
-                HStack {
-                    Image("icon-toasts")
-                        .resizable()
-                        .modifier(IconModifier())
-                    Spacer()
-                    Text("Toasts")
+                ForEach(0..<halfCount, id: \.self) {
+                    i in
+                    DishView(dish: dishes[i])
                 }
-                
-                Divider()
-                
-                HStack {
-                    Image("icon-tacos")
-                        .resizable()
-                        .modifier(IconModifier())
-                    Spacer()
-                    Text("Tacos")
-                }
-                
-                Divider()
-                
-                HStack {
-                    Image("icon-salads")
-                        .resizable()
-                        .modifier(IconModifier())
-                    Spacer()
-                    Text("Salads")
-                }
-                
-                Divider()
-                
-                HStack {
-                    Image("icon-halfavo")
-                        .resizable()
-                        .modifier(IconModifier())
-                    Spacer()
-                    Text("Spreads")
-                }
-                
             }
             
             VStack(alignment: .center, spacing: 16) {
@@ -67,43 +35,10 @@ struct DishesView: View {
                 }
             }
             
-            VStack(alignment: .trailing, spacing: 4) {
-                HStack {
-                    Text("Guacamole")
-                    Spacer()
-                    Image("icon-guacamole")
-                        .resizable()
-                        .modifier(IconModifier())
-                }
-                
-                Divider()
-                
-                HStack {
-                    Text("Sandwich")
-                    Spacer()
-                    Image("icon-sandwiches")
-                        .resizable()
-                        .modifier(IconModifier())
-                }
-                
-                Divider()
-                
-                HStack {
-                    Text("Soup")
-                    Spacer()
-                    Image("icon-soup")
-                        .resizable()
-                        .modifier(IconModifier())
-                }
-                
-                Divider()
-                
-                HStack {
-                    Text("Smoothie")
-                    Spacer()
-                    Image("icon-smoothies")
-                        .resizable()
-                        .modifier(IconModifier())
+            VStack(alignment: .leading, spacing: 4) {
+                ForEach(halfCount..<halfCount*2, id: \.self) {
+                    i in
+                    DishView(dish: dishes[i])
                 }
             }
         }
@@ -123,7 +58,7 @@ struct IconModifier: ViewModifier {
 
 struct DishesView_Previews: PreviewProvider {
     static var previews: some View {
-        DishesView()
+        DishesView(dishes: dishData)
             .previewLayout(.fixed(width: 414, height: 280))
     }
 }
