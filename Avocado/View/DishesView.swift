@@ -23,15 +23,20 @@ struct DishesView: View {
             VStack(alignment: .center, spacing: 16) {
                 HStack {
                     Divider()
+                        .overlay(Color("ColorGreenLight"))
                 }
                 
                 Image(systemName: "heart.circle")
+                    .renderingMode(.template)
+                    .foregroundStyle(Color.red)
                     .font(Font.title.weight(.ultraLight))
-                    .imageScale(.large)
                 
+                    .imageScale(.large)
+                    
                 
                 HStack {
                     Divider()
+                        .overlay(Color("ColorGreenLight"))
                 }
             }
             

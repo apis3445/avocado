@@ -19,6 +19,7 @@ struct AvocadosView: View {
             Spacer()
             
             Image("avocado")
+                
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 240, height: 240, alignment: .center)
@@ -50,16 +51,15 @@ struct AvocadosView: View {
                     Avocado is a powerhouse ingredient in any meal.
                     Enjoy these handpicked avocado recipes for breakfast, lunch, dinner & more!
                     """)
+                .foregroundColor(Color.white)
                 .lineLimit(nil)
                 .font(.system(.headline, design: .serif))
-                .foregroundColor(Color("ColorGreenLight"))
                 .multilineTextAlignment(.center)
                 .lineSpacing(8)
                 .frame(maxWidth: 640, minHeight: 120)
             }
             .padding()
-            
-            
+
             Spacer()
         }
         .background(
@@ -70,9 +70,7 @@ struct AvocadosView: View {
         .edgesIgnoringSafeArea(.all)
         .onAppear {
             self.pulsateAnimation.toggle()
-            
         }
-        
     }
 }
 

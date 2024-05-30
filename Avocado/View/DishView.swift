@@ -12,14 +12,20 @@ struct DishView: View {
     
     var body: some View {
         HStack {
-            Image(dish.icon)
-                .resizable()
-                .modifier(IconModifier())
-            Spacer()
-            Text(dish.name)
+            HStack {
+                Image(dish.icon)
+                    .resizable()
+                    .renderingMode(.template)
+                    .foregroundStyle(Color("ColorGreenDark"))
+                    .modifier(IconModifier())
+                    
+                Text(dish.name)
+                    .foregroundColor(Color("ColorGreenDark"))
+            }
         }
         
         Divider()
+            .overlay(Color("ColorGreenLight"))
     }
 }
 

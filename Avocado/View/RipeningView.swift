@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+struct Caption: View {
+    let text: String
+    var body: some View {
+        Text(text)
+            .padding()
+            .fontWeight(.bold)
+            .foregroundColor(Color("ColorGreenDark"))
+            .background(Color("ColorGreenLight").opacity(0.75),
+                        in: RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+            .padding(.horizontal, 40)
+            .padding(.vertical, 20)
+    }
+}
+
 struct RipeningView: View {
     
     // MARK: - Properties
@@ -17,124 +31,52 @@ struct RipeningView: View {
     
     var body: some View {
         VStack {
+            
+            Text(ripening.stage + " " + ripening.title)
+                .padding()
+                .font(.system(.title, design: .serif))
+                .fontWeight(.bold)
+                .foregroundColor(Color.white)
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(
+                        RoundedRectangle(cornerRadius: 12)
+                            .fill(Color("ColorGreenDark"))
+                    )
+                
             Image(ripening.image)
                 .resizable()
-                .frame(width: 100, height: 100, alignment: .center)
-                .clipShape(Circle())
-                .background(
-                    Circle()
-                        .fill(Color("ColorGreenLight"))
-                        .frame(width: 110, height: 110, alignment: .center)
-                )
-                .background(
-                    Circle()
-                        .fill(Color("ColorAppearanceAdaptive"))
-                        .frame(width: 120, height: 120, alignment: .center)
-                )
-                .zIndex(1)
+                .scaledToFit()
+                .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+                .padding(.horizontal, 40)
+                .padding(.vertical, 20)
+                .overlay(alignment: .bottomTrailing) {
+                               Caption(text: ripening.ripeness)
+                           }
                 .animation(Animation.easeInOut(duration: 1), value: slideInAnimation)
-                .offset(y: slideInAnimation ? 55 : -55)
-                
             
-            
-            VStack(alignment: .center, spacing: 10) {
-                //                Stage
-                VStack(alignment: .center, spacing: 0) {
-                    Text(ripening.stage)
-                        .font(.system(.largeTitle, design: .serif))
-                        .fontWeight(.bold)
-                    
-                    
-                    Text("Stage")
-                        .font(.system(.body, design: .serif))
-                        .fontWeight(.heavy)
-                    
-                }
-                .foregroundColor(Color("ColorGreenMedium"))
-                .padding(.top, 65)
-                .frame(width: 180)
-
-                Text(ripening.title)
-                    .font(.system(.title, design: .serif))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("ColorGreenMedium"))
-                    .padding(.vertical, 12)
-                    .padding(.horizontal, 0)
-                    .frame(width: 220)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(
-                                LinearGradient(
-                                    gradient: Gradient(
-                                        colors:
-                                        [Color.white,
-                                         Color("ColorGreenLight")]),
-                                    startPoint: .top,
-                                    endPoint: .bottom))
-                    )
-                    .shadow(color: Color("ColorBlackTransparentLight"), radius: 6,
-                            x: 0,
-                            y: 6)
-                
-                Spacer()
-                
-                Text(ripening.description)
-                    .foregroundColor(Color("ColorGreenDark"))
+            Text(ripening.description)
+                    .foregroundColor(Color.white)
+                    .font(.system(size: 24, weight: .regular, design: .default))
                     .fontWeight(.bold)
                     .lineLimit(nil)
-                Spacer()
-                
-                Text(ripening.ripeness.uppercased())
-                    .foregroundColor(.white)
-                    .font(.system(.callout, design: .serif))
-                    .fontWeight(.bold)
-                    .shadow(radius: 3)
-                    .padding(.vertical)
-                    .padding(.horizontal, 0)
-                    .frame(width: 185)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(
-                                LinearGradient(
-                                gradient: Gradient(
-                                    colors: [Color("ColorGreenMedium"), Color("ColorGeenDark")]),
-                                startPoint: .top,
-                                endPoint: .bottom))
-                            .shadow(
-                                color:Color("ColorBlackTransparentLight"),
-                                radius: 6,
-                                x: 0,
-                                y: 6 )
-                    )
-                
-                Text(ripening.instruction)
-                    .font(.footnote)
-                    .foregroundColor(Color("ColorGreenLight"))
-                    .fontWeight(.bold)
-                    .lineLimit(3)
-                    .frame(width: 160)
-                Spacer()
+                    .multilineTextAlignment(.center)
+                    .padding()
+            Divider().frame(minHeight: 3)
+                    .overlay(Color.white)
+                    .padding(.horizontal)
+            Text(ripening.instruction)
+                .font(.system(size: 22, weight: .regular, design: .default))
+                .foregroundColor(Color.white)
+                .frame(maxWidth: .infinity, alignment: .bottomLeading)
+                .lineLimit(3)
+                .multilineTextAlignment(.leading)
+                .padding(.vertical, 20)
+                .padding(.horizontal, 20)
             }
             .zIndex(0)
-            .multilineTextAlignment(.center)
-            .padding(.horizontal)
-            .frame(width: 260, height: 485, alignment: .center)
-            .background(
-                LinearGradient(
-                    gradient: Gradient(
-                        colors: [Color("ColorGreenLight"), Color("ColorGreenMedium")]),
-                    startPoint: .top,
-                    endPoint: .bottom)
-            )
+            .background(Color("ColorGreenMedium"))
             .cornerRadius(20)
         }
-        .edgesIgnoringSafeArea(.all)
-        .onAppear {
-            self.slideInAnimation.toggle()
-        }
-        
-        
-    }
 }
 
 struct RipeningView_Previews: PreviewProvider {

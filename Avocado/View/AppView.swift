@@ -20,7 +20,6 @@ struct AppView: View {
                         Image("tabicon-branch")
                             .renderingMode(.template)
                         Text("Avocados")
-                            
                     }
                 
                 ContentView()

@@ -16,17 +16,11 @@ struct FactsView: View {
         
         ZStack {
             Text(fact.content)
-                .padding(.leading, 55)
+                .padding(.leading, 65)
                 .padding(.trailing, 10)
                 .padding(.vertical, 3)
-                .frame(width: 300, height: 135, alignment: .center)
-                .background(
-                    LinearGradient(gradient:
-                                    Gradient(colors:
-                                                [Color("ColorGreenMedium"),
-                                                 Color("ColorGreenLight")]),
-                                   startPoint: .leading,
-                                   endPoint: .trailing))
+                .frame(width: 320, height: 135, alignment: .center)
+                .background(Color("ColorGreenMedium"))
                 .cornerRadius(12)
                 .lineLimit(6)
                 .multilineTextAlignment(.leading)
@@ -44,12 +38,7 @@ struct FactsView: View {
                 )
                 .background(
                     Circle()
-                        .fill(LinearGradient(
-                            gradient: Gradient(
-                                colors: [Color("ColorGreenMedium"),
-                                         Color("ColorGreenLight")]),
-                            startPoint: .trailing,
-                            endPoint: .leading))
+                        .fill(Color("ColorGreenMedium"))
                         .frame(width: 82, height: 82, alignment: .center)
                 )
                 .background(

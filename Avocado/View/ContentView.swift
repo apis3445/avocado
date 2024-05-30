@@ -71,7 +71,7 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .modifier(TitleModifier())
                     
-                    Text("Everithing you wanted to know about avocados but were too afraid to ask")
+                    Text("Everything you wanted to know about avocados but were too afraid to ask")
                         .font(.system(.body, design: .serif))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color.gray)

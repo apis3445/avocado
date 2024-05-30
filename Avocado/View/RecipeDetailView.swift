@@ -23,7 +23,7 @@ struct RecipeDetailView: View {
                     .scaledToFit()
                 
                 Group {
-                    //                    title
+                    // title
                     Text(recipe.title)
                         .font(.system(.largeTitle, design: .serif))
                         .fontWeight(.bold)
@@ -31,12 +31,7 @@ struct RecipeDetailView: View {
                         .foregroundColor(Color("ColorGreenAdaptive"))
                         .padding(.top, 10)
                     
-                    //                    rating
-                    RecipeRatingView(recipe: recipe)
-                    
-                    //                    cooking
-                    RecipeCookingView(recipe: recipe)
-                    //                    ingredients
+                   
                     Text("Ingredients")
                         .fontWeight(.bold)
                         .modifier(TitleModifier())
@@ -52,7 +47,7 @@ struct RecipeDetailView: View {
                         }
                     }
                     
-                    //                    instruction
+                    // instruction
                     
                     Text("Instructions")
                         .fontWeight(.bold)
