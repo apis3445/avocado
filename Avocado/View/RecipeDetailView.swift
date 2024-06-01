@@ -30,7 +30,7 @@ struct RecipeDetailView: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color("ColorGreenAdaptive"))
                         .padding(.top, 10)
-                    
+                        .accessibilityIdentifier("RecipeTitle")
                    
                     Text("Ingredients")
                         .fontWeight(.bold)

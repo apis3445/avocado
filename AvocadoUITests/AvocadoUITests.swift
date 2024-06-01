@@ -35,6 +35,10 @@ final class AvocadoUITests: XCTestCase {
         let avocadoRecipeElement = scrollViewsQuery.otherElements.containing(.staticText, identifier:recipe).element
         avocadoRecipeElement.swipeUp()
         avocadoRecipeElement.tap()
+        let elementsQuery = scrollViewsQuery.otherElements
+        let recipeTitle = elementsQuery.staticTexts["RecipeTitle"]
+        
+        XCTAssertEqual(recipeTitle.label, recipe)
     }
 
 }
