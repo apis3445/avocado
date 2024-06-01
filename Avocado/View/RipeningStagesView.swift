@@ -13,14 +13,17 @@ struct RipeningStagesView: View {
     
     // MARK: - Body
     var body: some View {
-        VStack{
-            ScrollView {
-                VStack(spacing: 50) {
-                    ForEach(rapiningStages) { stage in
-                        RipeningView(ripening: stage)
-                            .frame(width: 370, alignment: .center)
+        GeometryReader { geometry in
+            VStack{
+                ScrollView(.horizontal) {
+                    HStack(spacing: 40) {
+                        ForEach(rapiningStages) { stage in
+                            RipeningView(ripening: stage)
+                                .frame(width: 360, alignment: .center)
+                                .padding(EdgeInsets(top: 10, leading: 15, bottom: 20, trailing: 0))
+                        }
                     }
-                }.frame(maxWidth: .infinity, alignment: .center)
+                }
             }
         }
     }

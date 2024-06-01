@@ -31,10 +31,22 @@
 		09FE87152AC60B9D00924057 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE87142AC60B9D00924057 /* ContentView.swift */; };
 		09FE87172AC60BA500924057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FE87162AC60BA500924057 /* Assets.xcassets */; };
 		09FE871A2AC60BA500924057 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FE87192AC60BA500924057 /* Preview Assets.xcassets */; };
+		482656962C0AD1BA0001E647 /* AvocadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482656952C0AD1BA0001E647 /* AvocadoUITests.swift */; };
+		482656982C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */; };
 		4890C54E2BF9339500B0EE85 /* DishData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C54D2BF9339500B0EE85 /* DishData.swift */; };
 		4890C5502BF933B800B0EE85 /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C54F2BF933B800B0EE85 /* DishModel.swift */; };
 		4890C5522BF9A36300B0EE85 /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C5512BF9A36300B0EE85 /* DishView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		482656992C0AD1BA0001E647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09FE87072AC60B9D00924057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09FE870E2AC60B9D00924057;
+			remoteInfo = Avocado;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		094819132ACE238A005DA2B2 /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
@@ -63,6 +75,9 @@
 		09FE87142AC60B9D00924057 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		09FE87162AC60BA500924057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09FE87192AC60BA500924057 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		482656932C0AD1BA0001E647 /* AvocadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AvocadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		482656952C0AD1BA0001E647 /* AvocadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoUITests.swift; sourceTree = "<group>"; };
+		482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4890C54D2BF9339500B0EE85 /* DishData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishData.swift; sourceTree = "<group>"; };
 		4890C54F2BF933B800B0EE85 /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
 		4890C5512BF9A36300B0EE85 /* DishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
@@ -70,6 +85,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		09FE870C2AC60B9D00924057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482656902C0AD1BA0001E647 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				09FE87112AC60B9D00924057 /* Avocado */,
+				482656942C0AD1BA0001E647 /* AvocadoUITests */,
 				09FE87102AC60B9D00924057 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				09FE870F2AC60B9D00924057 /* Avocado.app */,
+				482656932C0AD1BA0001E647 /* AvocadoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +186,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		482656942C0AD1BA0001E647 /* AvocadoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				482656952C0AD1BA0001E647 /* AvocadoUITests.swift */,
+				482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */,
+			);
+			path = AvocadoUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -182,6 +215,24 @@
 			productReference = 09FE870F2AC60B9D00924057 /* Avocado.app */;
 			productType = "com.apple.product-type.application";
 		};
+		482656922C0AD1BA0001E647 /* AvocadoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4826569D2C0AD1BA0001E647 /* Build configuration list for PBXNativeTarget "AvocadoUITests" */;
+			buildPhases = (
+				4826568F2C0AD1BA0001E647 /* Sources */,
+				482656902C0AD1BA0001E647 /* Frameworks */,
+				482656912C0AD1BA0001E647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4826569A2C0AD1BA0001E647 /* PBXTargetDependency */,
+			);
+			name = AvocadoUITests;
+			productName = AvocadoUITests;
+			productReference = 482656932C0AD1BA0001E647 /* AvocadoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,11 +240,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					09FE870E2AC60B9D00924057 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					482656922C0AD1BA0001E647 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 09FE870E2AC60B9D00924057;
 					};
 				};
 			};
@@ -214,6 +269,7 @@
 			projectRoot = "";
 			targets = (
 				09FE870E2AC60B9D00924057 /* Avocado */,
+				482656922C0AD1BA0001E647 /* AvocadoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,6 +281,13 @@
 			files = (
 				09FE871A2AC60BA500924057 /* Preview Assets.xcassets in Resources */,
 				09FE87172AC60BA500924057 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		482656912C0AD1BA0001E647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +326,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4826568F2C0AD1BA0001E647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				482656982C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift in Sources */,
+				482656962C0AD1BA0001E647 /* AvocadoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4826569A2C0AD1BA0001E647 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09FE870E2AC60B9D00924057 /* Avocado */;
+			targetProxy = 482656992C0AD1BA0001E647 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		09FE871B2AC60BA500924057 /* Debug */ = {
@@ -444,6 +524,51 @@
 			};
 			name = Release;
 		};
+		4826569B2C0AD1BA0001E647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4EE6D69E6C;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = apis3445.AvocadoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Avocado;
+			};
+			name = Debug;
+		};
+		4826569C2C0AD1BA0001E647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4EE6D69E6C;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = apis3445.AvocadoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Avocado;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -461,6 +586,15 @@
 			buildConfigurations = (
 				09FE871E2AC60BA500924057 /* Debug */,
 				09FE871F2AC60BA500924057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4826569D2C0AD1BA0001E647 /* Build configuration list for PBXNativeTarget "AvocadoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4826569B2C0AD1BA0001E647 /* Debug */,
+				4826569C2C0AD1BA0001E647 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

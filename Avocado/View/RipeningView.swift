@@ -16,7 +16,7 @@ struct Caption: View {
             .foregroundColor(Color("ColorGreenDark"))
             .background(Color("ColorGreenLight").opacity(0.75),
                         in: RoundedRectangle(cornerRadius: 10.0, style: .continuous))
-            .padding(.horizontal, 40)
+            .padding(.horizontal, 30)
             .padding(.vertical, 20)
     }
 }
@@ -30,53 +30,68 @@ struct RipeningView: View {
     // MARK: - Body
     
     var body: some View {
-        VStack {
-            
-            Text(ripening.stage + " " + ripening.title)
-                .padding()
-                .font(.system(.title, design: .serif))
-                .fontWeight(.bold)
-                .foregroundColor(Color.white)
-                .frame(maxWidth: .infinity, alignment: .center)
-                .background(
+        GeometryReader { geometry in
+            VStack {
+                Text(ripening.stage + " " + ripening.title)
+                    .padding()
+                    .font(.system(.title, design: .serif))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.white)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(
                         RoundedRectangle(cornerRadius: 12)
-                            .fill(Color("ColorGreenDark"))
+                            .fill(Color("ColorGreenMedium"))
                     )
                 
-            Image(ripening.image)
-                .resizable()
-                .scaledToFit()
-                .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
-                .padding(.horizontal, 40)
-                .padding(.vertical, 20)
-                .overlay(alignment: .bottomTrailing) {
-                               Caption(text: ripening.ripeness)
-                           }
-                .animation(Animation.easeInOut(duration: 1), value: slideInAnimation)
-            
-            Text(ripening.description)
-                    .foregroundColor(Color.white)
+                Image(ripening.image)
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .circular))
+                    .padding(.horizontal, 30)
+                    .padding(.vertical, 20)
+                    .overlay(alignment: .bottomTrailing) {
+                        Caption(text: ripening.ripeness)
+                    }
+                    .background(
+                        RoundedRectangle(cornerRadius: 10.0, style: .circular)
+                            .fill(Color("ColorGreenDark"))
+                            .frame(width: geometry.size.width-45, height: geometry.size.width-45, alignment: .center)
+                        
+                    )
+                
+                    .animation(Animation.easeInOut(duration: 1), value: slideInAnimation)
+                
+                
+                Text(ripening.description)
+                    .italic()
                     .font(.system(size: 24, weight: .regular, design: .default))
                     .fontWeight(.bold)
+                    .foregroundColor(Color("ColorGreenDark"))
                     .lineLimit(nil)
                     .multilineTextAlignment(.center)
                     .padding()
-            Divider().frame(minHeight: 3)
-                    .overlay(Color.white)
+                
+                Divider().frame(minHeight: 3)
+                    .overlay(Color("ColorGreenDark"))
                     .padding(.horizontal)
-            Text(ripening.instruction)
-                .font(.system(size: 22, weight: .regular, design: .default))
-                .foregroundColor(Color.white)
-                .frame(maxWidth: .infinity, alignment: .bottomLeading)
-                .lineLimit(3)
-                .multilineTextAlignment(.leading)
-                .padding(.vertical, 20)
-                .padding(.horizontal, 20)
+                
+                Text(ripening.instruction)
+                    .font(.system(size: 22, weight: .regular, design: .default))
+                    .foregroundColor(Color("ColorGreenMedium"))
+                    .frame(maxWidth: .infinity, alignment: .bottomLeading)
+                    .lineLimit(3)
+                    .multilineTextAlignment(.leading)
+                    .padding(.vertical, 20)
+                    .padding(.horizontal, 20)
             }
-            .zIndex(0)
-            .background(Color("ColorGreenMedium"))
-            .cornerRadius(20)
         }
+        .background(Color.white)
+        .cornerRadius(12)
+        .shadow(color: Color("ColorBlackTransparentLight"),
+                radius: 8,
+                x: 0,
+                y: 0)
+    }
 }
 
 struct RipeningView_Previews: PreviewProvider {

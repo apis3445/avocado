@@ -40,7 +40,7 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .modifier(TitleModifier())
             
-                ScrollView(.horizontal, showsIndicators: false) {
+                ScrollView(.horizontal, showsIndicators: true) {
                     HStack(alignment: .top, spacing: 60) {
                         ForEach(facts) { fact in
                             FactsView(fact: fact)
@@ -50,6 +50,7 @@ struct ContentView: View {
                     .padding(.leading, 60)
                     .padding(.trailing, 20)
                 }
+               
                 
                 // MARK: - Recipe Cards
                 

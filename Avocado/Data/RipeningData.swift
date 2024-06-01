@@ -12,7 +12,7 @@ var ripeningData: [Ripening] = [
       image: "avocado-ripening-1",
       stage: "1",
       title: "Hard",
-      description: "Fresh off the tree, the avocado is very-very hard with no give.",
+      description: "Fresh off the tree, the avocado is very-very hard.",
       ripeness: "5+ Days",
       instruction: "Hold avocados at room temperature until they are fully ripe."
     ),
