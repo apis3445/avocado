@@ -27,17 +27,28 @@ final class AvocadoUITests: XCTestCase {
         
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        // Launch the app
         app.launch()
         
+        //Select the Recipes tab
         app.tabBars["Tab Bar"].buttons["Recipes"].tap()
         
+        //Get the element with the name of the recipe
         let scrollViewsQuery = app.scrollViews
         let avocadoRecipeElement = scrollViewsQuery.otherElements.containing(.staticText, identifier:recipe).element
+        
+        //Swipe up to the recipe "Avocado Crostini"
         avocadoRecipeElement.swipeUp()
+        
+        //Tap in the recipe
         avocadoRecipeElement.tap()
+        
+        //Gets the recipe title
         let elementsQuery = scrollViewsQuery.otherElements
         let recipeTitle = elementsQuery.staticTexts["RecipeTitle"]
         
+        //Assert that the recipe title in detail view will be the same
+        //that the main recipe view
         XCTAssertEqual(recipeTitle.label, recipe)
     }
 
