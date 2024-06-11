@@ -28,7 +28,7 @@
 		098FFF092ACB409700F7E266 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098FFF082ACB409700F7E266 /* AppView.swift */; };
 		098FFF0B2ACB565B00F7E266 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098FFF0A2ACB565B00F7E266 /* HeaderView.swift */; };
 		09FE87132AC60B9D00924057 /* AvocadoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE87122AC60B9D00924057 /* AvocadoApp.swift */; };
-		09FE87152AC60B9D00924057 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE87142AC60B9D00924057 /* ContentView.swift */; };
+		09FE87152AC60B9D00924057 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE87142AC60B9D00924057 /* RecipesView.swift */; };
 		09FE87172AC60BA500924057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FE87162AC60BA500924057 /* Assets.xcassets */; };
 		09FE871A2AC60BA500924057 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FE87192AC60BA500924057 /* Preview Assets.xcassets */; };
 		482656962C0AD1BA0001E647 /* AvocadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482656952C0AD1BA0001E647 /* AvocadoUITests.swift */; };
@@ -36,6 +36,14 @@
 		4890C54E2BF9339500B0EE85 /* DishData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C54D2BF9339500B0EE85 /* DishData.swift */; };
 		4890C5502BF933B800B0EE85 /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C54F2BF933B800B0EE85 /* DishModel.swift */; };
 		4890C5522BF9A36300B0EE85 /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C5512BF9A36300B0EE85 /* DishView.swift */; };
+		48A0E9C02C15393400E5B002 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A0E9BF2C15393400E5B002 /* TabBar.swift */; };
+		48A0E9C32C153C8300E5B002 /* TabBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A0E9C22C153C8300E5B002 /* TabBarProtocol.swift */; };
+		48A0E9C82C154D0E00E5B002 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A0E9C72C154D0E00E5B002 /* Tabs.swift */; };
+		48D594EC2C13FEF400DD7426 /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D594EB2C13FEF400DD7426 /* BaseScreen.swift */; };
+		48D594EE2C13FF4500DD7426 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D594ED2C13FF4500DD7426 /* BaseTest.swift */; };
+		48D594F02C14002500DD7426 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D594EF2C14002500DD7426 /* AppScreen.swift */; };
+		48D594F22C1401DD00DD7426 /* RecipesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D594F12C1401DD00DD7426 /* RecipesScreen.swift */; };
+		48D594F42C14126C00DD7426 /* RecipeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D594F32C14126C00DD7426 /* RecipeDetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +80,7 @@
 		09DEEDC72ACB371900A410C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		09FE870F2AC60B9D00924057 /* Avocado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avocado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09FE87122AC60B9D00924057 /* AvocadoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoApp.swift; sourceTree = "<group>"; };
-		09FE87142AC60B9D00924057 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		09FE87142AC60B9D00924057 /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		09FE87162AC60BA500924057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09FE87192AC60BA500924057 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		482656932C0AD1BA0001E647 /* AvocadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AvocadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +89,14 @@
 		4890C54D2BF9339500B0EE85 /* DishData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishData.swift; sourceTree = "<group>"; };
 		4890C54F2BF933B800B0EE85 /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
 		4890C5512BF9A36300B0EE85 /* DishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
+		48A0E9BF2C15393400E5B002 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		48A0E9C22C153C8300E5B002 /* TabBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarProtocol.swift; sourceTree = "<group>"; };
+		48A0E9C72C154D0E00E5B002 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		48D594EB2C13FEF400DD7426 /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
+		48D594ED2C13FF4500DD7426 /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		48D594EF2C14002500DD7426 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
+		48D594F12C1401DD00DD7426 /* RecipesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesScreen.swift; sourceTree = "<group>"; };
+		48D594F32C14126C00DD7426 /* RecipeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +144,7 @@
 		098FFF012ACB3FCD00F7E266 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				09FE87142AC60B9D00924057 /* ContentView.swift */,
+				09FE87142AC60B9D00924057 /* RecipesView.swift */,
 				098FFF022ACB400100F7E266 /* AvocadosView.swift */,
 				098FFF042ACB403C00F7E266 /* RipeningStagesView.swift */,
 				098FFF062ACB407000F7E266 /* SettingsView.swift */,
@@ -189,10 +205,50 @@
 		482656942C0AD1BA0001E647 /* AvocadoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				48A0E9C62C154CE600E5B002 /* Enums */,
+				48A0E9C12C153C6A00E5B002 /* Protocols */,
+				48A0E9BE2C15130D00E5B002 /* Components */,
+				48D594EA2C13FED200DD7426 /* Screens */,
 				482656952C0AD1BA0001E647 /* AvocadoUITests.swift */,
 				482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */,
+				48D594ED2C13FF4500DD7426 /* BaseTest.swift */,
 			);
 			path = AvocadoUITests;
+			sourceTree = "<group>";
+		};
+		48A0E9BE2C15130D00E5B002 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				48A0E9BF2C15393400E5B002 /* TabBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		48A0E9C12C153C6A00E5B002 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				48A0E9C22C153C8300E5B002 /* TabBarProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		48A0E9C62C154CE600E5B002 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				48A0E9C72C154D0E00E5B002 /* Tabs.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		48D594EA2C13FED200DD7426 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				48D594EB2C13FEF400DD7426 /* BaseScreen.swift */,
+				48D594EF2C14002500DD7426 /* AppScreen.swift */,
+				48D594F12C1401DD00DD7426 /* RecipesScreen.swift */,
+				48D594F32C14126C00DD7426 /* RecipeDetailScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +357,7 @@
 				098FFF072ACB407000F7E266 /* SettingsView.swift in Sources */,
 				094819282AD07113005DA2B2 /* RecipeRatingView.swift in Sources */,
 				094819302AD23AAC005DA2B2 /* RipeningModel.swift in Sources */,
-				09FE87152AC60B9D00924057 /* ContentView.swift in Sources */,
+				09FE87152AC60B9D00924057 /* RecipesView.swift in Sources */,
 				098FFF092ACB409700F7E266 /* AppView.swift in Sources */,
 				098FFF052ACB403C00F7E266 /* RipeningStagesView.swift in Sources */,
 				09FE87132AC60B9D00924057 /* AvocadoApp.swift in Sources */,
@@ -330,8 +386,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D594EE2C13FF4500DD7426 /* BaseTest.swift in Sources */,
+				48D594F42C14126C00DD7426 /* RecipeDetailScreen.swift in Sources */,
 				482656982C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift in Sources */,
+				48A0E9C82C154D0E00E5B002 /* Tabs.swift in Sources */,
+				48A0E9C02C15393400E5B002 /* TabBar.swift in Sources */,
+				48D594F22C1401DD00DD7426 /* RecipesScreen.swift in Sources */,
 				482656962C0AD1BA0001E647 /* AvocadoUITests.swift in Sources */,
+				48A0E9C32C153C8300E5B002 /* TabBarProtocol.swift in Sources */,
+				48D594F02C14002500DD7426 /* AppScreen.swift in Sources */,
+				48D594EC2C13FEF400DD7426 /* BaseScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

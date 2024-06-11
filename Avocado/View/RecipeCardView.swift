@@ -51,6 +51,7 @@ struct RecipeCardView: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color("ColorGreenMedium"))
                     .lineLimit(1)
+                    .accessibilityIdentifier("recipeTitle")
                 
                 Text(recipe.headline)
                     .font(.system(.body, design: .serif))

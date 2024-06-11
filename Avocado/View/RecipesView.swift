@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RecipesView: View {
     // MARK: - Properties
     
     var headers: [Header] = headerData
@@ -101,6 +101,6 @@ struct TitleModifier: ViewModifier {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(headers: headerData, facts: factData, recipes: recipesData)
+        RecipesView(headers: headerData, facts: factData, recipes: recipesData)
     }
 }

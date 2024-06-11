@@ -22,7 +22,7 @@ struct AppView: View {
                         Text("Avocados")
                     }
                 
-                ContentView()
+                RecipesView()
                     .tabItem {
                         Image("tabicon-book")
                             .renderingMode(.template)

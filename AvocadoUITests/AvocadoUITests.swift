@@ -7,49 +7,24 @@
 
 import XCTest
 
-final class AvocadoUITests: XCTestCase {
+final class AvocadoUITests: BaseTest {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testCanSeeRecipe() throws {
+    func testCanSeeRecipeDetail() throws {
         let recipe = "Avocado Crostini"
-        
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        // Launch the app
-        app.launch()
-        
-        //Select the Recipes tab
-        app.tabBars["Tab Bar"].buttons["Recipes"].tap()
-        
-        //Get the element with the name of the recipe
-        let scrollViewsQuery = app.scrollViews
-        let avocadoRecipeElement = scrollViewsQuery.otherElements.containing(.staticText, identifier:recipe).element
-        
-        //Swipe up to the recipe "Avocado Crostini"
-        avocadoRecipeElement.swipeUp()
-        
+        let appScreen = AppScreen()
+        //Tap in the tabbar with the text "Recipes"
+        let recipesScreen: RecipesScreen = appScreen.tapTab(tabIdentifier: Tabs.Recipes.rawValue)
+        //Get the recipe element
+        let recipeCardTitle = recipesScreen.selectRecipeByTitle(title: recipe)
+        //Because the recipe card is not visible in the screen we need to swipe to the card with the title "Avocado Crostini"
+        recipeCardTitle.swipeUp()
         //Tap in the recipe
-        avocadoRecipeElement.tap()
-        
-        //Gets the recipe title
-        let elementsQuery = scrollViewsQuery.otherElements
-        let recipeTitle = elementsQuery.staticTexts["RecipeTitle"]
-        
+        recipeCardTitle.tap()
+        let recipeDetailScreen = RecipeDetailScreen()
         //Assert that the recipe title in detail view will be the same
         //that the main recipe view
-        XCTAssertEqual(recipeTitle.label, recipe)
+        XCTAssertEqual(recipeDetailScreen.recipeTitle.label, recipe, "Recipe title is different to '\(recipe)'")
+         
     }
 
 }
