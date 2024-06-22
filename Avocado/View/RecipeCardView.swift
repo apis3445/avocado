@@ -25,9 +25,7 @@ struct RecipeCardView: View {
                 .scaledToFit()
                 .overlay(
                     HStack {
-                        
                         Spacer()
-                        
                         VStack {
                             Image(systemName: "bookmark")
                                 .font(Font.title.weight(.light))

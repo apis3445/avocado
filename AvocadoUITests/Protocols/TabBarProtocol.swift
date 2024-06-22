@@ -14,8 +14,10 @@ protocol TabBarProtocol {
 extension TabBarProtocol {
     
     func tapTab<T>(tabIdentifier: String, tabBarIdentifier: String = "Tab Bar") -> T where T: BaseScreen {
-        let tabBar: TabBar = TabBar(identifier: tabBarIdentifier)
-        tabBar.getTab(identifier: tabIdentifier).tap()
+        XCTContext.runActivity(named: "Tap in the tab: '\(tabIdentifier)'") { _ in
+            let tabBar: TabBar = TabBar(identifier: tabBarIdentifier)
+            tabBar.getTab(identifier: tabIdentifier).tap()
+        }
         return T.init()
     }
 }

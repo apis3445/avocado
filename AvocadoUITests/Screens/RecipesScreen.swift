@@ -9,26 +9,15 @@ import XCTest
 
 class RecipesScreen: BaseScreen {
     
-    lazy let scrollViewsQuery = BaseScreen.app.scrollViews
+    lazy var scrollView: ScrollView = .init()
+    lazy var recipeCardTitle: Text = .init(identifier: "recipeTitle")
     
     required init() {
         super.init()
-        visible()
     }
     
-    func selectRecipeByTitle(title: String) -> XCUIElement{
-        return scrollViewsQuery.otherElements.containing(.staticText, identifier:title).element
+    func swipeToRecipe(recipeTitle: String) {
+        let stepDescription = "Swipe to the recipe: '\(recipeTitle)'"
+        self.scrollView.swipeToElementWithText(text: recipeTitle, step: stepDescription )
     }
-    
-    func visible() {
-        guard scrollViewsQuery.firstMatch.waitForExistence(timeout: visibleTimeout) else {
-            XCTFail("Content View Screen is not visible")
-            return
-        }
-    }
-    
-}
-
-extension RecipesScreen {
-    
 }

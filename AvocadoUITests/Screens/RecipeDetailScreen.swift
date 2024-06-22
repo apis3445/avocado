@@ -9,10 +9,10 @@ import XCTest
 
 class RecipeDetailScreen: BaseScreen {
     
+    lazy var recipeTitle: Text = .init(identifier: "RecipeTitle")
+    
     required init() {
         super.init()
     }
-    
-    lazy let recipeTitle: XCUIElement = BaseScreen.app.staticTexts["RecipeTitle"]
-    
+
 }

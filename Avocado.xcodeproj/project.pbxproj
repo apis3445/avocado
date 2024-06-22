@@ -31,6 +31,7 @@
 		09FE87152AC60B9D00924057 /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE87142AC60B9D00924057 /* RecipesView.swift */; };
 		09FE87172AC60BA500924057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FE87162AC60BA500924057 /* Assets.xcassets */; };
 		09FE871A2AC60BA500924057 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FE87192AC60BA500924057 /* Preview Assets.xcassets */; };
+		480BC27E2C2131BE00823410 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC27D2C2131BE00823410 /* DateExtension.swift */; };
 		482656962C0AD1BA0001E647 /* AvocadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482656952C0AD1BA0001E647 /* AvocadoUITests.swift */; };
 		482656982C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */; };
 		4890C54E2BF9339500B0EE85 /* DishData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C54D2BF9339500B0EE85 /* DishData.swift */; };
@@ -44,6 +45,9 @@
 		48D594F02C14002500DD7426 /* AppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D594EF2C14002500DD7426 /* AppScreen.swift */; };
 		48D594F22C1401DD00DD7426 /* RecipesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D594F12C1401DD00DD7426 /* RecipesScreen.swift */; };
 		48D594F42C14126C00DD7426 /* RecipeDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D594F32C14126C00DD7426 /* RecipeDetailScreen.swift */; };
+		48F270622C1D397A00708653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F270612C1D397A00708653 /* AppDelegate.swift */; };
+		48F3DBED2C22851F005A72F0 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F3DBEC2C22851F005A72F0 /* ScrollView.swift */; };
+		48F3DBEF2C228AC6005A72F0 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F3DBEE2C228AC6005A72F0 /* Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,7 @@
 		09FE87142AC60B9D00924057 /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		09FE87162AC60BA500924057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09FE87192AC60BA500924057 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		480BC27D2C2131BE00823410 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		482656932C0AD1BA0001E647 /* AvocadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AvocadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		482656952C0AD1BA0001E647 /* AvocadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoUITests.swift; sourceTree = "<group>"; };
 		482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -97,6 +102,9 @@
 		48D594EF2C14002500DD7426 /* AppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreen.swift; sourceTree = "<group>"; };
 		48D594F12C1401DD00DD7426 /* RecipesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesScreen.swift; sourceTree = "<group>"; };
 		48D594F32C14126C00DD7426 /* RecipeDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailScreen.swift; sourceTree = "<group>"; };
+		48F270612C1D397A00708653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		48F3DBEC2C22851F005A72F0 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		48F3DBEE2C228AC6005A72F0 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +191,7 @@
 		09FE87112AC60B9D00924057 /* Avocado */ = {
 			isa = PBXGroup;
 			children = (
+				48F270612C1D397A00708653 /* AppDelegate.swift */,
 				098FFF012ACB3FCD00F7E266 /* View */,
 				098FFF002ACB3FC800F7E266 /* Model */,
 				098FFEFF2ACB3FBA00F7E266 /* Data */,
@@ -202,9 +211,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		480BC27C2C2131AC00823410 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				480BC27D2C2131BE00823410 /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		482656942C0AD1BA0001E647 /* AvocadoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				480BC27C2C2131AC00823410 /* Extensions */,
 				48A0E9C62C154CE600E5B002 /* Enums */,
 				48A0E9C12C153C6A00E5B002 /* Protocols */,
 				48A0E9BE2C15130D00E5B002 /* Components */,
@@ -220,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				48A0E9BF2C15393400E5B002 /* TabBar.swift */,
+				48F3DBEC2C22851F005A72F0 /* ScrollView.swift */,
+				48F3DBEE2C228AC6005A72F0 /* Text.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -362,6 +382,7 @@
 				098FFF052ACB403C00F7E266 /* RipeningStagesView.swift in Sources */,
 				09FE87132AC60B9D00924057 /* AvocadoApp.swift in Sources */,
 				098FFF032ACB400100F7E266 /* AvocadosView.swift in Sources */,
+				48F270622C1D397A00708653 /* AppDelegate.swift in Sources */,
 				094819142ACE238A005DA2B2 /* HeaderModel.swift in Sources */,
 				094819222AD0651B005DA2B2 /* RecipeModel.swift in Sources */,
 				094819162ACE23F3005DA2B2 /* HeaderData.swift in Sources */,
@@ -392,6 +413,9 @@
 				48A0E9C82C154D0E00E5B002 /* Tabs.swift in Sources */,
 				48A0E9C02C15393400E5B002 /* TabBar.swift in Sources */,
 				48D594F22C1401DD00DD7426 /* RecipesScreen.swift in Sources */,
+				480BC27E2C2131BE00823410 /* DateExtension.swift in Sources */,
+				48F3DBED2C22851F005A72F0 /* ScrollView.swift in Sources */,
+				48F3DBEF2C228AC6005A72F0 /* Text.swift in Sources */,
 				482656962C0AD1BA0001E647 /* AvocadoUITests.swift in Sources */,
 				48A0E9C32C153C8300E5B002 /* TabBarProtocol.swift in Sources */,
 				48D594F02C14002500DD7426 /* AppScreen.swift in Sources */,
