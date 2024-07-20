@@ -7,15 +7,15 @@
 
 import XCTest
 
-class Text {
+class Text : BaseComponent {
     
-    let app = XCUIApplication()
     let text: XCUIElement
     let identifier: String
     
-    init(identifier: String) {
+    required init(app: XCUIApplication, identifier: String) {
         self.text = app.staticTexts[identifier]
         self.identifier = identifier
+        super.init(app: app)
     }
     
     func tap(text: String) {

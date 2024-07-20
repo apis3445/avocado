@@ -9,7 +9,7 @@ import XCTest
 
 class RecipeDetailScreen: BaseScreen {
     
-    lazy var recipeTitle: Text = .init(identifier: "RecipeTitle")
+    lazy var recipeTitle: Text = .init(app: self.app, identifier: "RecipeTitle")
     
     required init() {
         super.init()

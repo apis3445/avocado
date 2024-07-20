@@ -9,11 +9,15 @@ import XCTest
 
 class RecipesScreen: BaseScreen {
     
-    lazy var scrollView: ScrollView = .init()
-    lazy var recipeCardTitle: Text = .init(identifier: "recipeTitle")
+    lazy var scrollView: ScrollView = .init(app: self.app)
+    lazy var recipeCardTitle: Text = .init(app: self.app, identifier: "recipeTitle")
     
     required init() {
         super.init()
+    }
+    
+    public func mockHeader(stub: HeadersStub? = nil) {
+        stub?.start()
     }
     
     func swipeToRecipe(recipeTitle: String) {

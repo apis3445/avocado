@@ -6,15 +6,15 @@
 //
 
 import XCTest
+import SBTUITestTunnelClient
 
-class TabBar {
-    
-    let app = XCUIApplication()
+class TabBar : BaseComponent {
     
     var tabBar: XCUIElement
     
-    init( identifier: String) {
-       tabBar = app.tabBars[identifier]
+    required init(app: XCUIApplication, identifier: String) {
+        self.tabBar = app.tabBars[identifier]
+        super.init(app: app)
     }
     
     func getTab(identifier: String) -> XCUIElement {

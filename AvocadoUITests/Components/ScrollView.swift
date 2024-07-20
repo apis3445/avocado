@@ -7,10 +7,13 @@
 
 import XCTest
 
-class ScrollView {
+class ScrollView : BaseComponent {
     
-    let app = XCUIApplication()
-    lazy var scrollViewsQuery = BaseScreen.app.scrollViews
+    lazy var scrollViewsQuery = self.app.scrollViews
+    
+    required override init(app: XCUIApplication) {
+        super.init(app: app)
+    }
     
     func swipeToElementWithText(text: String, step: String = "" ) {
         var stepDescription = "Swipe to element with the text: '\(text )'"
