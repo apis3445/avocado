@@ -34,6 +34,13 @@
 		480BC27E2C2131BE00823410 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480BC27D2C2131BE00823410 /* DateExtension.swift */; };
 		482656962C0AD1BA0001E647 /* AvocadoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482656952C0AD1BA0001E647 /* AvocadoUITests.swift */; };
 		482656982C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */; };
+		484858912C2E5D7800BC2391 /* headers.json in Resources */ = {isa = PBXBuildFile; fileRef = 484858902C2E5D7800BC2391 /* headers.json */; };
+		485D23EC2C39EC480071E866 /* empty.json in Resources */ = {isa = PBXBuildFile; fileRef = 485D23EB2C39EC480071E866 /* empty.json */; };
+		485D23EF2C39ED300071E866 /* StubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485D23EE2C39ED300071E866 /* StubTests.swift */; };
+		485FEC692C2BCFA30016B19A /* SBTUITestTunnelClient in Frameworks */ = {isa = PBXBuildFile; productRef = 485FEC682C2BCFA30016B19A /* SBTUITestTunnelClient */; };
+		485FEC6B2C2BCFA30016B19A /* SBTUITestTunnelServer in Frameworks */ = {isa = PBXBuildFile; productRef = 485FEC6A2C2BCFA30016B19A /* SBTUITestTunnelServer */; };
+		4862F5EB2C2D0FBA00FC4FEE /* BaseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4862F5EA2C2D0FBA00FC4FEE /* BaseComponent.swift */; };
+		487571B82C2FB46D00DD15B7 /* HeadersStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487571B72C2FB46D00DD15B7 /* HeadersStub.swift */; };
 		4890C54E2BF9339500B0EE85 /* DishData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C54D2BF9339500B0EE85 /* DishData.swift */; };
 		4890C5502BF933B800B0EE85 /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C54F2BF933B800B0EE85 /* DishModel.swift */; };
 		4890C5522BF9A36300B0EE85 /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890C5512BF9A36300B0EE85 /* DishView.swift */; };
@@ -91,6 +98,11 @@
 		482656932C0AD1BA0001E647 /* AvocadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AvocadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		482656952C0AD1BA0001E647 /* AvocadoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoUITests.swift; sourceTree = "<group>"; };
 		482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		484858902C2E5D7800BC2391 /* headers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = headers.json; sourceTree = "<group>"; };
+		485D23EB2C39EC480071E866 /* empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty.json; sourceTree = "<group>"; };
+		485D23EE2C39ED300071E866 /* StubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubTests.swift; sourceTree = "<group>"; };
+		4862F5EA2C2D0FBA00FC4FEE /* BaseComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseComponent.swift; sourceTree = "<group>"; };
+		487571B72C2FB46D00DD15B7 /* HeadersStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersStub.swift; sourceTree = "<group>"; };
 		4890C54D2BF9339500B0EE85 /* DishData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishData.swift; sourceTree = "<group>"; };
 		4890C54F2BF933B800B0EE85 /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
 		4890C5512BF9A36300B0EE85 /* DishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
@@ -112,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485FEC6B2C2BCFA30016B19A /* SBTUITestTunnelServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485FEC692C2BCFA30016B19A /* SBTUITestTunnelClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,16 +236,36 @@
 		482656942C0AD1BA0001E647 /* AvocadoUITests */ = {
 			isa = PBXGroup;
 			children = (
+				485D23ED2C39ED150071E866 /* Tests */,
+				4848588F2C2E5D3200BC2391 /* Stubs */,
 				480BC27C2C2131AC00823410 /* Extensions */,
 				48A0E9C62C154CE600E5B002 /* Enums */,
 				48A0E9C12C153C6A00E5B002 /* Protocols */,
 				48A0E9BE2C15130D00E5B002 /* Components */,
 				48D594EA2C13FED200DD7426 /* Screens */,
-				482656952C0AD1BA0001E647 /* AvocadoUITests.swift */,
-				482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */,
-				48D594ED2C13FF4500DD7426 /* BaseTest.swift */,
 			);
 			path = AvocadoUITests;
+			sourceTree = "<group>";
+		};
+		4848588F2C2E5D3200BC2391 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				484858902C2E5D7800BC2391 /* headers.json */,
+				487571B72C2FB46D00DD15B7 /* HeadersStub.swift */,
+				485D23EB2C39EC480071E866 /* empty.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		485D23ED2C39ED150071E866 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				48D594ED2C13FF4500DD7426 /* BaseTest.swift */,
+				482656952C0AD1BA0001E647 /* AvocadoUITests.swift */,
+				482656972C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift */,
+				485D23EE2C39ED300071E866 /* StubTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		48A0E9BE2C15130D00E5B002 /* Components */ = {
@@ -240,6 +274,7 @@
 				48A0E9BF2C15393400E5B002 /* TabBar.swift */,
 				48F3DBEC2C22851F005A72F0 /* ScrollView.swift */,
 				48F3DBEE2C228AC6005A72F0 /* Text.swift */,
+				4862F5EA2C2D0FBA00FC4FEE /* BaseComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -287,6 +322,9 @@
 			dependencies = (
 			);
 			name = Avocado;
+			packageProductDependencies = (
+				485FEC6A2C2BCFA30016B19A /* SBTUITestTunnelServer */,
+			);
 			productName = Avocado;
 			productReference = 09FE870F2AC60B9D00924057 /* Avocado.app */;
 			productType = "com.apple.product-type.application";
@@ -305,6 +343,9 @@
 				4826569A2C0AD1BA0001E647 /* PBXTargetDependency */,
 			);
 			name = AvocadoUITests;
+			packageProductDependencies = (
+				485FEC682C2BCFA30016B19A /* SBTUITestTunnelClient */,
+			);
 			productName = AvocadoUITests;
 			productReference = 482656932C0AD1BA0001E647 /* AvocadoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -339,6 +380,7 @@
 			mainGroup = 09FE87062AC60B9D00924057;
 			packageReferences = (
 				4874C30D2BF04B01003F0312 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				485FEC672C2BCFA30016B19A /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */,
 			);
 			productRefGroup = 09FE87102AC60B9D00924057 /* Products */;
 			projectDirPath = "";
@@ -364,6 +406,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484858912C2E5D7800BC2391 /* headers.json in Resources */,
+				485D23EC2C39EC480071E866 /* empty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,11 +455,14 @@
 				48D594F42C14126C00DD7426 /* RecipeDetailScreen.swift in Sources */,
 				482656982C0AD1BA0001E647 /* AvocadoUITestsLaunchTests.swift in Sources */,
 				48A0E9C82C154D0E00E5B002 /* Tabs.swift in Sources */,
+				4862F5EB2C2D0FBA00FC4FEE /* BaseComponent.swift in Sources */,
 				48A0E9C02C15393400E5B002 /* TabBar.swift in Sources */,
 				48D594F22C1401DD00DD7426 /* RecipesScreen.swift in Sources */,
 				480BC27E2C2131BE00823410 /* DateExtension.swift in Sources */,
 				48F3DBED2C22851F005A72F0 /* ScrollView.swift in Sources */,
 				48F3DBEF2C228AC6005A72F0 /* Text.swift in Sources */,
+				487571B82C2FB46D00DD15B7 /* HeadersStub.swift in Sources */,
+				485D23EF2C39ED300071E866 /* StubTests.swift in Sources */,
 				482656962C0AD1BA0001E647 /* AvocadoUITests.swift in Sources */,
 				48A0E9C32C153C8300E5B002 /* TabBarProtocol.swift in Sources */,
 				48D594F02C14002500DD7426 /* AppScreen.swift in Sources */,
@@ -690,6 +737,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		485FEC672C2BCFA30016B19A /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Subito-it/SBTUITestTunnel.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		4874C30D2BF04B01003F0312 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase/supabase-swift.git";
@@ -699,6 +754,19 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		485FEC682C2BCFA30016B19A /* SBTUITestTunnelClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 485FEC672C2BCFA30016B19A /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */;
+			productName = SBTUITestTunnelClient;
+		};
+		485FEC6A2C2BCFA30016B19A /* SBTUITestTunnelServer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 485FEC672C2BCFA30016B19A /* XCRemoteSwiftPackageReference "SBTUITestTunnel" */;
+			productName = SBTUITestTunnelServer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09FE87072AC60B9D00924057 /* Project object */;
 }

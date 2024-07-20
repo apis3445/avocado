@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "image": "avocado-slice-1",
+        "headline": "Avocado Mock",
+        "subHeadline": "Avocados are a powerhouse ingredient at any meal for anyone"
+    },
+    {
+        "id": 2,
+        "image": "avocado-slice-2",
+        "headline": "Healthy Mock",
+        "subHeadline": "Avocados are good for us and they can be part of our healthy diet."
+    }
+]

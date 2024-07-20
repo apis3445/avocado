@@ -12,4 +12,8 @@ class AppScreen: BaseScreen, TabBarProtocol {
     required init() {
         super.init()
     }
+    
+    public func stub(stub: HeadersStub? = nil) {
+        stub?.start()
+    }
 }

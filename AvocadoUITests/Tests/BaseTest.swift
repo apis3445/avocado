@@ -6,19 +6,24 @@
 //
 
 import XCTest
+import SBTUITestTunnelClient
 
 class BaseTest : XCTestCase {
     
-    let app = XCUIApplication()
+    static var shared: BaseTest!
+    
+    //let app = XCUIApplication()
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-
+        BaseTest.shared = self
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         XCTContext.runActivity(named: "Launch app with clean state") { _ in
             //You can set some launch arguments to for example logout to clean state for all tests
-            app.launchArguments = ["logOut"]
+            app.launchArguments = ["startStubServer","logOut"]
             app.launch()
+            app.launchTunnel()
         }
     }
     

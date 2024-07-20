@@ -13,7 +13,7 @@ final class AvocadoUITests: BaseTest {
         let recipe = "Avocado Crostini"
         let appScreen = AppScreen()
         //Tap in the tabbar with the text "Recipes"
-        let recipesScreen: RecipesScreen = appScreen.tapTab(tabIdentifier: Tabs.Recipes.rawValue)
+        let recipesScreen: RecipesScreen = appScreen.tapTab(app: appScreen.app, tabIdentifier: Tabs.Recipes.rawValue)
         recipesScreen.swipeToRecipe(recipeTitle: recipe)
         recipesScreen.recipeCardTitle.tap(text: recipe)
         let recipeDetailScreen = RecipeDetailScreen()
