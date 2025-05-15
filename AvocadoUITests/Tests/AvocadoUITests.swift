@@ -23,7 +23,13 @@ final class AvocadoUITests: BaseTest {
             XCTAssertEqual(recipeDetailScreen.recipeTitle.label(), recipe, "Recipe title is different to '\(recipe)'")
         }
         recipeDetailScreen.attachScreenshot(name: "RecipeDetail")
-
+    }
+    
+    func testAccessibility() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        try app.performAccessibilityAudit()    
     }
 
 }

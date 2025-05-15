@@ -80,11 +80,10 @@ struct RecipesView: View {
                 }
                 .frame(maxWidth: 640)
                 .padding()
-                .padding(.bottom, 85)
-                        
+                .padding(.bottom, 85)  
             }
-            
         }
+        .background(Color.white.ignoresSafeArea())
         .edgesIgnoringSafeArea(.all)
         .padding(0)
     }

@@ -31,7 +31,7 @@ struct RecipeDetailView: View {
                         .foregroundColor(Color("ColorGreenAdaptive"))
                         .padding(.top, 10)
                         .accessibilityIdentifier("RecipeTitle")
-                   
+                    
                     Text("Ingredients")
                         .fontWeight(.bold)
                         .modifier(TitleModifier())
@@ -49,24 +49,17 @@ struct RecipeDetailView: View {
                     
                     // instruction
                     
-                    Text("Instructions")
+                    Text("Directions")
                         .fontWeight(.bold)
                         .modifier(TitleModifier())
                     
-                    ForEach(recipe.instructions, id: \.self) { item in
+                    ForEach(Array(recipe.instructions.enumerated()), id: \.element) {index, item in
                         VStack(alignment: .center, spacing: 5) {
-                            Image(systemName: "chevron.down.circle")
-                                .resizable()
-                                .frame(width: 42, height: 42)
-                                .imageScale(.large)
-                                .font(Font.title.weight(.ultraLight))
-                                .foregroundColor(Color("ColorGreenAdaptive"))
-                            
-                            Text(item)
+                            Text("\(index+1).\(item)")
                                 .lineLimit(nil)
-                                .multilineTextAlignment(.center)
+                                .multilineTextAlignment(.leading)
                                 .font(.system(.body, design: .serif))
-                                .frame(minHeight: 100)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                         }
                     }
                 }

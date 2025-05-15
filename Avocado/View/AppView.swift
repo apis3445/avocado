@@ -19,8 +19,10 @@ struct AppView: View {
                     .tabItem {
                         Image("tabicon-branch")
                             .renderingMode(.template)
+
                         Text("Avocados")
                     }
+                    .accessibilityLabel("Avocados section")
                 
                 RecipesView()
                     .tabItem {
@@ -28,6 +30,7 @@ struct AppView: View {
                             .renderingMode(.template)
                         Text("Recipes")
                     }
+                    .accessibilityLabel("Recipes section")
                 
                 RipeningStagesView()
                     .tabItem {
@@ -35,6 +38,7 @@ struct AppView: View {
                             .renderingMode(.template)
                         Text("Ripening")
                     }
+                    .accessibilityLabel("Rippening section")
                 
                 SettingsView()
                     .tabItem {
@@ -42,6 +46,7 @@ struct AppView: View {
                             .renderingMode(.template)
                         Text("Settings")
                     }
+                    .accessibilityLabel("Settings section")
             }
         }
         .edgesIgnoringSafeArea(.top)
@@ -53,6 +58,8 @@ struct AppView_Previews: PreviewProvider {
     
     static var previews: some View {
         AppView()
+            .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
+            .preferredColorScheme(.dark)
     }
 }
 

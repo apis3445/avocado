@@ -15,6 +15,8 @@ enum HeadersStub {
     func start() {
         let request = SBTRequestMatch(url: "/Header", method: "GET")
         var fileToMock: String;
+         var statusCode: Int = 200
+         
         switch self {
         case .getHeaders:
             fileToMock = "headers.json"
@@ -22,8 +24,9 @@ enum HeadersStub {
             fileToMock = "empty.json"
         case .failure(let code):
             fileToMock = "headers.json"
+            statusCode = code
         }
-        let response = SBTStubResponse(fileNamed: fileToMock)
+        let response = SBTStubResponse(fileNamed: fileToMock, returnCode: statusCode)
         BaseTest.shared.app.stubRequests(matching: request, response: response)
     }
 }
