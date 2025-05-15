@@ -14,8 +14,13 @@ struct Caption: View {
             .padding()
             .fontWeight(.bold)
             .foregroundColor(Color("ColorGreenDark"))
-            .background(Color("ColorGreenLight").opacity(0.75),
-                        in: RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+            .background(.white,
+                                    in: RoundedRectangle(cornerRadius: 10.0, style: .continuous))
+            .overlay(
+                            RoundedRectangle(cornerRadius: 10.0, style: .continuous)
+                                .stroke(Color("ColorGreenDark"), lineWidth: 1)
+                        )
+           
             .padding(.horizontal, 30)
             .padding(.vertical, 20)
     }
@@ -31,57 +36,48 @@ struct RipeningView: View {
     
     var body: some View {
         GeometryReader { geometry in
+
             VStack {
-                Text(ripening.stage + " " + ripening.title)
-                    .padding()
-                    .font(.system(.title, design: .serif))
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.white)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(Color("ColorGreenMedium"))
-                    )
-                
                 Image(ripening.image)
                     .resizable()
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .circular))
                     .padding(.horizontal, 30)
                     .padding(.vertical, 20)
-                    .overlay(alignment: .bottomTrailing) {
-                        Caption(text: ripening.ripeness)
-                    }
-                    .background(
-                        RoundedRectangle(cornerRadius: 10.0, style: .circular)
-                            .fill(Color("ColorGreenDark"))
-                            .frame(width: geometry.size.width-45, height: geometry.size.width-45, alignment: .center)
-                        
-                    )
-                
-                    .animation(Animation.easeInOut(duration: 1), value: slideInAnimation)
-                
-                
-                Text(ripening.description)
-                    .italic()
-                    .font(.system(size: 24, weight: .regular, design: .default))
+                    .overlay(alignment: .topTrailing) {
+                            Caption(text: ripening.ripeness)
+                        }
+                        .animation(Animation.easeInOut(duration: 1), value: slideInAnimation)
+                Divider().padding(.top, 0)
+                Text(ripening.stage + " " + ripening.title)
+                    .font(.system(.title, design: .rounded))
                     .fontWeight(.bold)
-                    .foregroundColor(Color("ColorGreenDark"))
-                    .lineLimit(nil)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                
-                Divider().frame(minHeight: 3)
-                    .overlay(Color("ColorGreenDark"))
-                    .padding(.horizontal)
-                
-                Text(ripening.instruction)
-                    .font(.system(size: 22, weight: .regular, design: .default))
                     .foregroundColor(Color("ColorGreenMedium"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom, 8)
+                    .padding(.leading, 20)
+                    
+                Text(ripening.description)
+                    .font(.system(.headline, design: .default))
+                    .foregroundColor(.gray)
+                    .lineLimit(nil)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(.leading)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 10)
+                Text("Instructions")
+                    .font(.system(.title2, design: .rounded))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color("ColorGreenMedium"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 10)
+                Text(ripening.instruction)
+                    .font(.system(.body, design: .default))
+                    .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .bottomLeading)
                     .lineLimit(3)
                     .multilineTextAlignment(.leading)
-                    .padding(.vertical, 20)
                     .padding(.horizontal, 20)
             }
         }

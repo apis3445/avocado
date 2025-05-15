@@ -13,20 +13,26 @@ struct RecipeCookingView: View {
     var recipe: Recipe
     
     var body: some View {
-        HStack(alignment: .center, spacing: 12) {
-            HStack(alignment: .center,spacing: 2) {
+        HStack(alignment: .center, spacing: 24) {
+            VStack(alignment: .center,spacing: 2) {
                 Image(systemName: "person.2")
-                Text("Serves: \(recipe.serves)")
+                    .frame(width: 28, height: 28)
+                    .imageScale(.large)
+                Text("\(recipe.serves) Serves")
             }
             
-            HStack(alignment: .center,spacing: 2) {
+            VStack(alignment: .center,spacing: 2) {
                 Image(systemName: "clock")
-                Text("Prep: \(recipe.preparation)")
+                    .frame(width: 28, height: 28)
+                    .imageScale(.large)
+                Text("\(recipe.preparation) Prep")
             }
             
-            HStack(alignment: .center,spacing: 2) {
+            VStack(alignment: .center,spacing: 2) {
                 Image(systemName: "flame")
-                Text("Cooking: \(recipe.cooking)")
+                    .imageScale(.large)
+                    .frame(width: 28, height: 28)
+                Text("\(recipe.cooking) Cooking" )
             }
         }
         .font(.footnote)
