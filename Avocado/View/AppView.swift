@@ -49,7 +49,6 @@ struct AppView: View {
                     .accessibilityLabel("Settings section")
             }
         }
-        .ignoresSafeArea(.all)
         .edgesIgnoringSafeArea(.top)
         .accentColor(Color.blue)
     }

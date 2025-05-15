@@ -55,7 +55,7 @@ struct RecipeDetailView: View {
                     
                     ForEach(Array(recipe.instructions.enumerated()), id: \.element) {index, item in
                         VStack(alignment: .center, spacing: 5) {
-                            Text("\(index+1) .\(item)")
+                            Text("\(index+1).\(item)")
                                 .lineLimit(nil)
                                 .multilineTextAlignment(.leading)
                                 .font(.system(.body, design: .serif))
