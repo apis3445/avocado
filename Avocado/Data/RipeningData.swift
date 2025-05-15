@@ -12,7 +12,7 @@ var ripeningData: [Ripening] = [
       image: "avocado-ripening-1",
       stage: "1",
       title: "Hard",
-      description: "Fresh off the tree, the avocado is very-very hard.",
+      description: "Fresh off the tree, the avocado is very very hard.",
       ripeness: "5+ Days",
       instruction: "Hold avocados at room temperature until they are fully ripe."
     ),
@@ -37,7 +37,7 @@ var ripeningData: [Ripening] = [
       stage: "4",
       title: "Ripe",
       description: "The avocados is ripe, and yields slightly to gentle pressure.",
-      ripeness: "Firm-Ripe",
+      ripeness: "1 day",
       instruction: "Avocados are best for thin or thick slices and small cubes."
     ),
     Ripening(
@@ -45,7 +45,7 @@ var ripeningData: [Ripening] = [
       stage: "5",
       title: "Ripe",
       description: "The avocado is ripe, and yields easily to gentle pressure.",
-      ripeness: "Ripe",
+      ripeness: "1 day",
       instruction: "Avocados are best for mashing and smoothies as well."
     )
 ]
